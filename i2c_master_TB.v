@@ -1,10 +1,6 @@
-// Code your testbench here
-// or browse Examples
 /**********************************************************************************
  * Module	: I2C_master_TB.v
  * Description	: I2C master controller
- * Date		: 11/09/2018
- * Author	: Srinivas
  * *******************************************************************************/
 
 module i2c_master_TB();
@@ -66,20 +62,18 @@ module i2c_master_TB();
   //STIMULUS BLOCK
   initial begin
       read_write = 'b0;
-      #230  sda_en = 'b0; //ack = 'b0;	
-	  	  
-		   
-     //       ack  = 'b0;
+      #230  sda_en = 'b0; //ack = 'b0;	  	 
+         //ack  = 'b0;
 	 // #250  sda_en = 'b1;			
-     /* #250
-			i2c_sda_inout  = 'b1;
+         /* #250
+			i2c_sda_inout  = 'b1;            //Pass these stimulus to see the data.
 			i2c_sda_inout  = 'b0;
 			i2c_sda_inout  = 'b0;
 			i2c_sda_inout  = 'b1;
 			i2c_sda_inout  = 'b0;
 			i2c_sda_inout  = 'b1;
 			i2c_sda_inout  = 'b1;
-	        i2c_sda_inout  = 'b0;
+	                i2c_sda_inout  = 'b0;
     $monitor($time,"SDA = %b",i2c_sda_inout);*/
 $monitor($time,"\tsda line when read = %b",read_value);
     sda_in  = 'b0;
